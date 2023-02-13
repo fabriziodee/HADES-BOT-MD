@@ -21,7 +21,7 @@ await conn.groupSettingUpdate(m.chat, isClose)
 }
 handler.help = ['group open / close', 'grupo aperto / chiuso']
 handler.tags = ['group']
-handler.command = /^(group|grupo)$/i
+handler.command = /^(group|gruppo)$/i
 handler.admin = true
 handler.botAdmin = true
 handler.limit = 1
