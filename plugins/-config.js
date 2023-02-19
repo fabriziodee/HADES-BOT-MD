@@ -4,8 +4,8 @@ let isClose = { // Switch Case Like :v
 'close': 'announcement',
 'aperto': 'not_announcement',
 'chiuso': 'announcement',
-'abrir': 'not_announcement',
-'cerrar': 'announcement',
+'ga': 'not_announcement',
+'gc': 'announcement',
 }[(args[0] || '')]
 if (isClose === undefined)
 throw `
@@ -17,11 +17,11 @@ throw `
 │${usedPrefix + command} cerrar*
 ╰─────°.♡.°‧─────`.trim()
 await conn.groupSettingUpdate(m.chat, isClose)
-{m.reply('*[ ✔ ] 𝙶𝚁𝚄𝙿𝙾 APERTO/CHIUSO CORRETTAMENTE*')}
+{m.reply('*[ ✔ ] IL GRUPPO E STATO APERTO/CHIUSO CORRETTAMENTE*')}
 }
-handler.help = ['group open / close', 'grupo aperto / chiuso']
+handler.help = ['group open / close', 'gruppo aperto / chiuso','ga / gc']
 handler.tags = ['group']
-handler.command = /^(group|gruppo)$/i
+handler.command = /^(group|gruppo|g)$/i
 handler.admin = true
 handler.botAdmin = true
 handler.limit = 1
